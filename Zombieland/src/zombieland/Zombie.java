@@ -25,15 +25,19 @@ public class Zombie {
         this.speed = 0;
         this.life = 0;
         this.attack = 0;
+        this.posiX = 0;
+        this.posiY = 0;
         
     }
     
     // Constructor with parameters
-    public Zombie(String name, int speed, int life, int attack) {
+    public Zombie(String name, int speed, int life, int attack, int posiX, int posiY) {
         this.name = name;
         this.speed = speed;
         this.life = life;
         this.attack = attack;
+        this.posiX = posiX;
+        this.posiY = posiY;
     }
     // getters & setters
     public String getName() {

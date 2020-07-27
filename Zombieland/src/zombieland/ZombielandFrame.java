@@ -12,8 +12,9 @@ import javax.swing.JFrame;
  * @author abram
  */
 public class ZombielandFrame  extends JFrame{
-   private ZombielandPanel panel;
+    private ZombielandPanel panel;
     private JButton button;
+    private Player player;
 
     public ZombielandFrame() {
         // Calls the parent constructor and adds a title
@@ -50,6 +51,10 @@ public class ZombielandFrame  extends JFrame{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         ZombielandFrame frame = new ZombielandFrame();
+       
     }
 }
+
+

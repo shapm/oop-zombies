@@ -14,6 +14,7 @@ import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import java.util.ArrayList;
 
 
 public class ZombielandPanel extends JPanel implements ActionListener {
@@ -25,8 +26,10 @@ public class ZombielandPanel extends JPanel implements ActionListener {
     Player player= new Player(); 
     Zombie zombie= new Zombie(); 
     Timer timer = new Timer(10,this); 
+    ArrayList<Zombie> zombies;
     
     private ZombielandPanel panel;
+  
     public ZombielandPanel(int width, int height) {
         //Create the panel
         super();
@@ -42,6 +45,14 @@ public class ZombielandPanel extends JPanel implements ActionListener {
         addKeyListener(new teclado());
         timer.start();
       }
+    
+    public  void generation(){
+        
+       zombies.add(new Generic());
+       zombies.add(new Homero());
+       zombies.add(new Terminator());
+  
+    }
     
     public void toggle() {
         isDay = !isDay;
@@ -75,11 +86,11 @@ public class ZombielandPanel extends JPanel implements ActionListener {
         //g.drawImage(murci,50,200,100,100,this);
         //create zombies
         homero = new ImageIcon(getClass().getResource("/zombies/homeroRecto.png")).getImage();
-        g.drawImage(homero,1050,40,112,146,this);
+        g.drawImage(homero,zombie.tenerX(),zombie.tenerY(),112,146,this);
         generic = new ImageIcon(getClass().getResource("/zombies/genericoRecto.png")).getImage();
         g.drawImage(generic,zombie.tenerX(),zombie.tenerY(),112,146,this);
         terminator= new ImageIcon(getClass().getResource("/zombies/terminatorRecto.png")).getImage();
-        g.drawImage(terminator,1050,350,112,146,this);
+        g.drawImage(terminator,zombie.tenerX(),zombie.tenerY(),112,146,this);
         
         //put tombs and hands  
         mano = new ImageIcon(getClass().getResource("/zombieland/hand.png")).getImage();//paa obtenr imagen

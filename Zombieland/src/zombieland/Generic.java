@@ -11,10 +11,10 @@ package zombieland;
  */
 public class Generic extends Zombie {
     public Generic() {
-        super("Generic", 2, 20, 10);
+        super("Generic", 2, 20, 10, 0, 0);
     }
-    public Generic(int posiX,int posiY, int speed, int life, int attack) {
-        super("Generic", 2, life, attack);
+    public Generic(int posiX, int posiY, int speed, int life, int attack) {
+        super("Generic", 2, life, attack, posiX, posiY);
         
     }
 }

@@ -13,7 +13,8 @@ public class Generic extends Zombie {
     public Generic() {
         super("Generic", 2, 20, 10);
     }
-    public Generic(boolean direction, int speed, int life, int attack) {
+    public Generic(int posiX,int posiY, int speed, int life, int attack) {
         super("Generic", 2, life, attack);
+        
     }
 }

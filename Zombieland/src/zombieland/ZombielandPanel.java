@@ -23,6 +23,7 @@ public class ZombielandPanel extends JPanel implements ActionListener {
     private Image fondo,homero,terminator,generic;  
     private int x1,y1,x2,x3,x4,y2,y3,y4;
     Player player= new Player(); 
+    Zombie zombie= new Zombie(); 
     Timer timer = new Timer(10,this); 
     
     private ZombielandPanel panel;
@@ -70,13 +71,13 @@ public class ZombielandPanel extends JPanel implements ActionListener {
             g.setColor(tierra);
             g.fillRect(0, 0, width, height);
         }
-        murci = new ImageIcon(getClass().getResource("/zombieland/murcielago.gif")).getImage();
-        g.drawImage(murci,50,200,100,100,this);
+        //murci = new ImageIcon(getClass().getResource("/zombieland/murcielago.gif")).getImage();
+        //g.drawImage(murci,50,200,100,100,this);
         //create zombies
         homero = new ImageIcon(getClass().getResource("/zombies/homeroRecto.png")).getImage();
         g.drawImage(homero,1050,40,112,146,this);
         generic = new ImageIcon(getClass().getResource("/zombies/genericoRecto.png")).getImage();
-        g.drawImage(generic,1050,200,112,146,this);
+        g.drawImage(generic,zombie.tenerX(),zombie.tenerY(),112,146,this);
         terminator= new ImageIcon(getClass().getResource("/zombies/terminatorRecto.png")).getImage();
         g.drawImage(terminator,1050,350,112,146,this);
         

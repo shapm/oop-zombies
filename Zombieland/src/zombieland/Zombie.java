@@ -5,6 +5,8 @@
  */
 package zombieland;
 
+import java.util.Random;
+
 /**
  *
  * @author luisderek
@@ -14,6 +16,8 @@ public class Zombie {
     protected int speed;
     protected int life;
     protected int attack;
+    protected int posiX;
+    protected int posiY;
     
     // Constructor without parameters
     public Zombie() {
@@ -59,5 +63,18 @@ public class Zombie {
    
     public void setAttack(int attack) {
         this.attack = attack;
+    }
+    public void mover(){
+        Random rand = new Random();
+        posiX = rand.nextInt();
+        posiY = rand.nextInt();
+    }
+    
+    public int tenerX(){
+        return posiX;
+    }
+    
+    public int tenerY(){
+        return posiY;
     }
 }

@@ -9,6 +9,11 @@ package zombieland;
  *
  * @author luisderek
  */
-public class Homero {
-    
+public class Homero extends Zombie{
+    public Homero() {
+        super("Homero", 1, 10, 5);
+    }
+    public Homero(boolean direction, int speed, int life, int attack) {
+        super("Homero", 2, life, attack);
+    }
 }

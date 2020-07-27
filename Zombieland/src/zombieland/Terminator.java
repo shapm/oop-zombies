@@ -9,6 +9,11 @@ package zombieland;
  *
  * @author luisderek
  */
-public class Terminator {
-    
+public class Terminator extends Zombie{
+    public Terminator() {
+        super("Homero", 2, 25, 20);
+    }
+    public Terminator(boolean direction, int speed, int life, int attack) {
+        super("Terminator", 2, life, attack);
+    }
 }

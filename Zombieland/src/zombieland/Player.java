@@ -26,17 +26,17 @@ public class Player {
     public void keyPressed(KeyEvent e) {//metodo para mover al personaje
      int key =  e.getKeyCode();
      if (key == KeyEvent.VK_LEFT){
-         dx= -1;
+         dx= -2;
          personaje= new ImageIcon(getClass().getResource("/player/lateralIzquierdo.png")).getImage();    
   
          //personaje= new ImageIcon(getClass().getResource("/player/lateralLevantadoIzquierdo.png")).getImage();    
          }
     if (key == KeyEvent.VK_RIGHT){
-         dx= 1;
+         dx= 2;
         personaje= new ImageIcon(getClass().getResource("/player/lateralDerecho.png")).getImage();//paa obtenr imagen
          }
     if (key == KeyEvent.VK_UP){
-         dy= -1;
+         dy= -2;
          personaje= new ImageIcon(getClass().getResource("/player/traseroDerescho.png")).getImage();
          }
     if (key == KeyEvent.VK_DOWN){ 

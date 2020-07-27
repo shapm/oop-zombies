@@ -135,11 +135,14 @@ public class ZombielandPanel extends JPanel implements ActionListener {
        
         
 }
-public void actionPerformed(ActionEvent e){
-    player.mover();
-    repaint();
+    
+    public void actionPerformed(ActionEvent e){
+        
+        player.mover();
+        repaint();
 }  
-private class teclado extends KeyAdapter{
+    private class teclado extends KeyAdapter{
+        
     public void keyPressed (KeyEvent e){
         player.keyPressed(e);
     }
